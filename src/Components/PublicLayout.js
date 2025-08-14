@@ -1,15 +1,15 @@
-import NavBar from './NavBar';
-import { Outlet } from 'react-router-dom';
- 
+import React from 'react';
+import { Outlet } from 'react-router-dom';  // Isso permite o conteúdo dinâmico da página ser carregado aqui
+
 const PublicLayout = () => {
   return (
-    <div className="App">
-      <NavBar />
-      <div className="container">
-        <Outlet />
-      </div>
+    <div>
+      {/* A estrutura do layout (NavBar já foi carregado no App.js) */}
+      <main>
+        <Outlet /> {/* Exibe o conteúdo da página (Home, Cursos, etc.) aqui */}
+      </main>
     </div>
   );
 };
- 
+
 export default PublicLayout;

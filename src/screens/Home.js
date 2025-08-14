@@ -1,25 +1,9 @@
-
-// src/pages/index.js
 import React from 'react';
 import './HomeModule.css';
 
 function Home() {
     return (
         <div className="container">
-            <header className="header">
-                <nav className="nav">
-                    <div className="logo">Cursos TI</div>
-                    <div className="nav-links">
-                        <a href="/">Home</a>
-                        <a href="/cursos">Cursos</a>
-                        <a href="/noticias">Notícias</a>
-                        <a href="/novidades">Novidades</a>
-                        <a href="/contato">Contato</a>
-                        <a href="/login">Login</a>
-                    </div>
-                </nav>
-            </header>
-
             <main className="main-content">
                 <section>
                     <h1 className="page-title">Bem-vindo à Plataforma de Cursos de TI</h1>
@@ -66,10 +50,6 @@ function Home() {
                     </div>
                 </section>
             </main>
-
-            <footer className="footer">
-                <p>&copy; 2023 Plataforma de Cursos de TI. Todos os direitos reservados.</p>
-            </footer>
         </div>
     );
 }

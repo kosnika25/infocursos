@@ -1,0 +1,42 @@
+/* NavBarModule.css */
+.navbar {
+    background-color: #120161;  /* Cor de fundo do navbar */
+    padding: 1rem;  /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;  /* Cor do texto do logo */
+}
+
+.links_list {
+    list-style: none;
+    display: flex;  /* Exibe os links em linha */
+    margin: 0;
+    padding: 0;
+}
+
+.links_list li {
+    margin-left: 1.5rem;  /* Espaço entre os itens */
+}
+
+/* Estilizando os links */
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;  /* Animação para troca de cor ao passar o mouse */
+}
+
+.link:hover {
+    text-decoration: underline;  /* Sublinha o link quando o mouse passa por cima */
+}
+
+/* Estilo para o link ativo */
+.active {
+    color: #FFD700;  /* Cor para o link ativo (dourado) */
+}
