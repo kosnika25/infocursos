@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { NavLink } from 'react-router-dom';  // Para navegação entre páginas
-import styles from './NavBarModule.css';  // Importando o CSS corretamente
+import styles from './NavBar.module.css';  // Importando o CSS corretamente
 
 const NavBar = () => {
   return (

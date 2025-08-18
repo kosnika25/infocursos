@@ -1,0 +1,41 @@
+/* NavBarModule.css */
+
+.navbar {
+  background-color: #120161;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(247, 245, 245);
+}
+
+.links_list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.link_item {
+  margin-left: 1.5rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: #2187e7;
+}
