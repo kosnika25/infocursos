@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Tecnologia.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function Tecnologia() {
@@ -21,7 +21,7 @@ function Tecnologia() {
 
         <div className={styles.contentBody}>
           <div className={styles.contentImage}>
-            <img src="/images/ti.jpeg" alt="Tecnologia da Informação" />
+            <img src="/ti.jpeg" alt="Tecnologia da Informação" />
           </div>
           <div className={styles.contentText}>
             <p>A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital...</p>

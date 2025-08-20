@@ -1,12 +1,7 @@
-.footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background-color: #fdfdff;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #333;
-}
-footer{
-    background-color: blue;
-    
+footer {
+  background-color: #120161;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem;
 }

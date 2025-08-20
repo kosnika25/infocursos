@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Noticias.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 
 function Noticias() {
   return (
@@ -20,9 +20,9 @@ function Noticias() {
           </div>
           <div className={styles.cardContent}>
             <p>
-              Recentemente, diversas instituições sofreram ataques cibernéticos significativos, 
-              destacando a crescente sofisticação das ameaças digitais. Em novembro de 2023, a 
-              Nissan North America foi alvo de um ataque à sua VPN externa, resultando na exposição 
+              Recentemente, diversas instituições sofreram ataques cibernéticos significativos,
+              destacando a crescente sofisticação das ameaças digitais. Em novembro de 2023, a
+              Nissan North America foi alvo de um ataque à sua VPN externa, resultando na exposição
               de dados pessoais de mais de 53.000 funcionários.
             </p>
           </div>
@@ -36,8 +36,8 @@ function Noticias() {
           </div>
           <div className={styles.cardContent}>
             <p>
-              Empresas de tecnologia estão adotando novas medidas de segurança para proteger contra 
-              ameaças cibernéticas cada vez mais sofisticadas. Saiba como essas medidas podem impactar 
+              Empresas de tecnologia estão adotando novas medidas de segurança para proteger contra
+              ameaças cibernéticas cada vez mais sofisticadas. Saiba como essas medidas podem impactar
               seu trabalho diário.
             </p>
           </div>
@@ -51,7 +51,7 @@ function Noticias() {
           </div>
           <div className={styles.cardContent}>
             <p>
-              Confira as principais tendências de tecnologia da informação que devem dominar o mercado 
+              Confira as principais tendências de tecnologia da informação que devem dominar o mercado
               em 2024, desde inteligência artificial até computação quântica.
             </p>
           </div>

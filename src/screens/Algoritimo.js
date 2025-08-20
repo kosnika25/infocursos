@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Algoritimo.module.css'
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function Algoritmo() {
@@ -21,7 +21,7 @@ function Algoritmo() {
 
         <div className={styles.contentBody}>
           <div className={styles.contentImage}>
-            <img src="/images/algoritmo.webp" alt="Algoritmos" />
+            <img src="/algoritmo.webp" alt="Algoritmos" />
           </div>
           <div className={styles.contentText}>
             <p>Antes de tudo: um erro muito comum é confundir 'algoritmo' e 'logaritmo'...</p>

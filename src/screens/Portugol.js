@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Portugol.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function Portugol() {
@@ -22,7 +22,7 @@ function Portugol() {
 
                 <div className={styles.contentBody}>
                     <div className={styles.contentImage}>
-                        <img src="/images/portugol.webp" alt="Linguagem Portugol" />
+                        <img src="/portugol.webp" alt="Linguagem Portugol" />
                     </div>
                     <div className={styles.contentText}>
                         <p>A programação é uma das habilidades mais importantes atualmente. Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida, desde aplicativos de celular até sistemas complexos de inteligência artificial.<br></br>

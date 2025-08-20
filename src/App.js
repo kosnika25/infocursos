@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';  // Página inicial
 import Cursos from './screens/Cursos'; // Exemplo de outra página
-import Noticias from './screens/Noticias'; 
+import Noticias from './screens/Noticias';
 import Novidades from './screens/Novidades';
 import Contato from './screens/Contato';
 import Login from './screens/Login';
@@ -9,7 +9,7 @@ import NavBar from './Components/NavBar';  // Importando o NavBar global
 import Footer from './Components/Footer';  // Importando o Footer global
 import './App.css';
 import AccessibilityTools from './Components/AccessibilityTools';
-import Libras from './Components/Libras';
+import VLibras from './Components/VLibras';
 import Tecnologia from './screens/Tecnologia';
 import Portugol from './screens/Portugol';
 import Algoritmo from './screens/Algoritimo';
@@ -21,8 +21,8 @@ function App() {
       <BrowserRouter>
         {/* NavBar será exibido em todas as páginas */}
         <NavBar />
-       <AccessibilityTools/>
-       <Libras/>
+        <AccessibilityTools />
+        <VLibras />
         {/* Conteúdo das páginas */}
         <main className="App-main">
           <div className="container">
@@ -35,8 +35,8 @@ function App() {
               <Route path="login" element={<Login />} />
               <Route path="tecnologia" element={<Tecnologia />} />
               <Route path="Portugol" element={<Portugol />} />
-                            <Route path="algoritimo" element={<Algoritmo />} />
-
+              <Route path="algoritimo" element={<Algoritmo />} />
+                 <Route path="accessibilitytools" element={<AccessibilityTools />} />
             </Routes>
           </div>
         </main>

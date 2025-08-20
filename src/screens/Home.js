@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Home.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 
 function Home() {
   return (
@@ -22,9 +22,9 @@ function Home() {
             </div>
             <div className={styles.cardContent}>
               <p>
-                Bem-vindo(a) ao aplicativo de cursos da área de tecnologia da informação, 
-                onde você irá aprender sobre as tecnologias emergentes do mercado de trabalho. 
-                Aqui você encontrará cursos sobre programação, redes, design, projetos, 
+                Bem-vindo(a) ao aplicativo de cursos da área de tecnologia da informação,
+                onde você irá aprender sobre as tecnologias emergentes do mercado de trabalho.
+                Aqui você encontrará cursos sobre programação, redes, design, projetos,
                 engenharia de software, inteligência artificial e muito mais.
               </p>
               <p>Explore os links e navegue conosco nesta jornada de aprendizado.</p>
@@ -41,8 +41,8 @@ function Home() {
             <h3 className={styles.cardTitle}>O que é Tecnologia da Informação</h3>
             <div className={styles.cardContent}>
               <p>
-                A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital, 
-                desempenhando um papel estratégico na inovação, automação e otimização de processos 
+                A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital,
+                desempenhando um papel estratégico na inovação, automação e otimização de processos
                 em empresas e na sociedade.
               </p>
             </div>
@@ -53,8 +53,8 @@ function Home() {
             <h3 className={styles.cardTitle}>O que é linguagem Portugol?</h3>
             <div className={styles.cardContent}>
               <p>
-                A programação é uma das habilidades mais importantes atualmente. 
-                Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida, 
+                A programação é uma das habilidades mais importantes atualmente.
+                Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida,
                 desde aplicativos de celular até sistemas complexos de inteligência artificial.
               </p>
             </div>
@@ -65,12 +65,12 @@ function Home() {
             <h3 className={styles.cardTitle}>O que são algoritmos?</h3>
             <div className={styles.cardContent}>
               <p>
-                Antes de tudo: um erro muito comum é confundir as palavras 'algoritmo' e 'logaritmo'. 
-                São palavras parecidas, mas com significado bem diferente: 
+                Antes de tudo: um erro muito comum é confundir as palavras 'algoritmo' e 'logaritmo'.
+                São palavras parecidas, mas com significado bem diferente:
                 'Logaritmo' é uma ferramenta matemática. Algoritmo é uma ferramenta de computação.
               </p>
             </div>
-            <a href="/algoritmos" className={styles.btn}>Saiba mais</a>
+            <a href="/algoritimo" className={styles.btn}>Saiba mais</a>
           </div>
         </section>
       </main>

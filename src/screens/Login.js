@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Login.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function Login() {

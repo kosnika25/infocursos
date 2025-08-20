@@ -55,9 +55,6 @@ margin-right: 3rem;
 }
 
 /* Cabeçalho */
-.header {
- 
-}
 
 .logo {
   font-size: 1.5rem;
@@ -82,4 +79,105 @@ margin-right: 3rem;
 
 .nav-links a:hover {
   color: #ddd;
+}
+.header {
+  width: 100%;
+  background-color: #120161;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.links_list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.links_list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #120161;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .links_list {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
 }

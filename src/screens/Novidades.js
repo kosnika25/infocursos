@@ -4,7 +4,7 @@
 import React from 'react';
 import styles from './Novidades.module.css'; // Crie o CSS correspondente
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+import Libras from '../Components/VLibras';
 
 function Novidades() {
   return (
