@@ -8,6 +8,11 @@ import Login from './screens/Login';
 import NavBar from './Components/NavBar';  // Importando o NavBar global
 import Footer from './Components/Footer';  // Importando o Footer global
 import './App.css';
+import AccessibilityTools from './Components/AccessibilityTools';
+import Libras from './Components/Libras';
+import Tecnologia from './screens/Tecnologia';
+import Portugol from './screens/Portugol';
+import Algoritmo from './screens/Algoritimo';
 
 // O componente App, que é o layout global
 function App() {
@@ -16,7 +21,8 @@ function App() {
       <BrowserRouter>
         {/* NavBar será exibido em todas as páginas */}
         <NavBar />
-
+       <AccessibilityTools/>
+       <Libras/>
         {/* Conteúdo das páginas */}
         <main className="App-main">
           <div className="container">
@@ -27,6 +33,10 @@ function App() {
               <Route path="novidades" element={<Novidades />} />
               <Route path="contato" element={<Contato />} />
               <Route path="login" element={<Login />} />
+              <Route path="tecnologia" element={<Tecnologia />} />
+              <Route path="Portugol" element={<Portugol />} />
+                            <Route path="algoritimo" element={<Algoritmo />} />
+
             </Routes>
           </div>
         </main>

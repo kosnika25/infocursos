@@ -4,6 +4,7 @@ import styles from './NavBar.module.css';  // Importando o CSS corretamente
 
 const NavBar = () => {
   return (
+    <header className={styles.header}>
     <nav className={styles.navbar}>
       <div className={styles.logo}>Cursos Tecnologia</div> {/* Logo do navbar */}
       <ul className={styles.links_list}>
@@ -15,6 +16,7 @@ const NavBar = () => {
         <li><NavLink to="/login" className={styles.link} activeClassName={styles.active}>Login</NavLink></li>
       </ul>
     </nav>
+    </header>
   );
 };
 

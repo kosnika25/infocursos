@@ -1,57 +1,81 @@
+// Home.js
 import React from 'react';
-import './HomeModule.css';
+import styles from './Home.module.css';
+import AccessibilityTools from "../Components/AccessibilityTools";
+import Libras from '../Components/Libras';
 
 function Home() {
-    return (
-        <div className="container">
-            <main className="main-content">
-                <section>
-                    <h1 className="page-title">Bem-vindo à Plataforma de Cursos de TI</h1>
+  return (
+    <div className={styles.container}>
+      <AccessibilityTools />
+      <Libras />
 
-                    <div className="card">
-                        <div className="card-header">
-                            <div className="card-icon">👋</div>
-                            <h2 className="card-title">Olá, Fabiano!</h2>
-                        </div>
-                        <div className="card-content">
-                            <p>Bem-vindo(a) ao aplicativo de cursos da área de tecnologia da informação, onde você irá aprender
-                                sobre as tecnologias emergentes do mercado de trabalho.</p>
-                            <p>Explore os links e navegue conosco nesta jornada de aprendizado.</p>
-                        </div>
-                        <a href="/cursos" className="btn">Explorar Cursos</a>
-                    </div>
-                </section>
+      <main className={styles.mainContent}>
+        {/* Seção de boas-vindas */}
+        <section>
+          <h1 className={styles.pageTitle}>Bem-vindo à Plataforma de Cursos de TI</h1>
 
-                <section>
-                    <h2 className="section-title">Destaques</h2>
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <div className={styles.cardIcon}>👋</div>
+              <h2 className={styles.cardTitle}>Olá, Fabiano!</h2>
+            </div>
+            <div className={styles.cardContent}>
+              <p>
+                Bem-vindo(a) ao aplicativo de cursos da área de tecnologia da informação, 
+                onde você irá aprender sobre as tecnologias emergentes do mercado de trabalho. 
+                Aqui você encontrará cursos sobre programação, redes, design, projetos, 
+                engenharia de software, inteligência artificial e muito mais.
+              </p>
+              <p>Explore os links e navegue conosco nesta jornada de aprendizado.</p>
+            </div>
+            <a href="/cursos" className={styles.btn}>Explorar Cursos</a>
+          </div>
+        </section>
 
-                    <div className="card">
-                        <h3 className="card-title">O que é Tecnologia da Informação</h3>
-                        <div className="card-content">
-                            <p>A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital...</p>
-                        </div>
-                        <a href="/tecnologia-informacao" className="btn">Saiba mais</a>
-                    </div>
+        {/* Seção de destaques */}
+        <section>
+          <h2 className={styles.sectionTitle}>Destaques</h2>
 
-                    <div className="card">
-                        <h3 className="card-title">O que é linguagem Portugol?</h3>
-                        <div className="card-content">
-                            <p>A programação é uma das habilidades mais importantes atualmente...</p>
-                        </div>
-                        <a href="/portugol" className="btn">Saiba mais</a>
-                    </div>
+          <div className={styles.card}>
+            <h3 className={styles.cardTitle}>O que é Tecnologia da Informação</h3>
+            <div className={styles.cardContent}>
+              <p>
+                A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital, 
+                desempenhando um papel estratégico na inovação, automação e otimização de processos 
+                em empresas e na sociedade.
+              </p>
+            </div>
+            <a href="/tecnologia" className={styles.btn}>Saiba mais</a>
+          </div>
 
-                    <div className="card">
-                        <h3 className="card-title">O que são algoritmos?</h3>
-                        <div className="card-content">
-                            <p>Antes de tudo: um erro muito comum é confundir as palavras 'algoritmo' e 'logaritmo'...</p>
-                        </div>
-                        <a href="/algoritmos" className="btn">Saiba mais</a>
-                    </div>
-                </section>
-            </main>
-        </div>
-    );
+          <div className={styles.card}>
+            <h3 className={styles.cardTitle}>O que é linguagem Portugol?</h3>
+            <div className={styles.cardContent}>
+              <p>
+                A programação é uma das habilidades mais importantes atualmente. 
+                Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida, 
+                desde aplicativos de celular até sistemas complexos de inteligência artificial.
+              </p>
+            </div>
+            <a href="/portugol" className={styles.btn}>Saiba mais</a>
+          </div>
+
+          <div className={styles.card}>
+            <h3 className={styles.cardTitle}>O que são algoritmos?</h3>
+            <div className={styles.cardContent}>
+              <p>
+                Antes de tudo: um erro muito comum é confundir as palavras 'algoritmo' e 'logaritmo'. 
+                São palavras parecidas, mas com significado bem diferente: 
+                'Logaritmo' é uma ferramenta matemática. Algoritmo é uma ferramenta de computação.
+              </p>
+            </div>
+            <a href="/algoritmos" className={styles.btn}>Saiba mais</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
 
 export default Home;

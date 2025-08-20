@@ -1,0 +1,118 @@
+
+.contentHeader {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 1.5rem;         /* espaço entre ícone e texto */
+  background-color: #120161;
+  color: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.contentIcon {
+  flex-shrink: 0;        /* impede de encolher */
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #120161;
+  font-size: 2rem;
+}
+
+.contentHeader div {
+  display: flex;
+  flex-direction: column; /* deixa h1 e p em coluna */
+  justify-content: center;
+}
+
+.contentTitle {
+  font-size: 1.8rem;
+  margin-right: 10rem; /* remove margin extra */
+  color: white;
+}
+
+.contentHeader p {
+  margin: 0; /* remove margin extra */
+  color: #fff;
+}
+.newsSection {
+  margin-bottom: 3rem;
+}
+
+.newsSection h2 {
+  color: #120161;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left; /* 👈 força alinhamento do texto e botões à esquerda */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: left; /* 👈 garante alinhamento mesmo no header */
+}
+
+.cardContent {
+    text-align: left; /* 👈 garante que parágrafos fiquem à esquerda */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #120161;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    text-align: left; /* 👈 botão acompanha o alinhamento */
+    margin-bottom: 2rem;
+}
+
+.cardIcon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    background-color: #120161;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #0a0140;
+}
+.cardTitle {
+    font-size: 1.5rem;
+    color: #120161;
+}
+.newsSection {
+  margin-bottom: 3rem;
+}
+
+.newSection h2 {
+  color: #120161;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}

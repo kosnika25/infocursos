@@ -1,19 +1,19 @@
-// Login.js
+// Cadastro.js
 import React from 'react';
-import styles from './Login.module.css';
+import styles from './Cadastro.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
 import Libras from '../Components/Libras';
 import { Link } from 'react-router-dom';
 
-function Login() {
+function Cadastro() {
   return (
     <div className={styles.container}>
       <AccessibilityTools />
       <Libras />
 
       <main className={styles.mainContent}>
-        <div className={styles.loginForm}>
-          <h1 className={styles.pageTitle}>Login</h1>
+        <div className={styles.registerForm}>
+          <h1 className={styles.pageTitle}>Cadastro</h1>
           <form>
             <div className={styles.formGroup}>
               <label htmlFor="email">Email</label>
@@ -25,14 +25,19 @@ function Login() {
               <input type="password" id="password" required />
             </div>
 
+            <div className={styles.formGroup}>
+              <label htmlFor="confirm-password">Confirmar Senha</label>
+              <input type="password" id="confirm-password" required />
+            </div>
+
             <div className={styles.formActions}>
-              <button type="submit" className={styles.btn}>Entrar</button>
+              <button type="submit" className={styles.btn}>Cadastrar</button>
               <Link to="/" className={`${styles.btn} ${styles.btnSecondary}`}>Cancelar</Link>
             </div>
 
             <div className={styles.formLinks}>
-              <Link to="/esqueceu-senha">Esqueci minha senha</Link>
-              <Link to="/cadastro">Criar conta</Link>
+              <span>Já tem conta?</span>
+              <Link to="/login">Login</Link>
             </div>
           </form>
         </div>
@@ -41,4 +46,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Cadastro;
