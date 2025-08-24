@@ -19,17 +19,23 @@ function Tecnologia() {
           </div>
         </div>
 
-        <div className={styles.contentBody}>
-          <div className={styles.contentImage}>
-            <img src="/ti.jpeg" alt="Tecnologia da Informação" />
-          </div>
-          <div className={styles.contentText}>
-            <p>A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital...</p>
-            <p>Ela engloba um amplo conjunto de recursos tecnológicos e computacionais...</p>
-            <p>Desde a infraestrutura de hardware e software até a cibersegurança...</p>
+        <div className={styles.card}>
+          <div className={styles.contentBody}>
+            <div className={styles.contentImage}>
+              <img src="/ti.jpeg" alt="Tecnologia da Informação" />
+            </div>
+            <div className={styles.contentText}>
+              <p>A Tecnologia da Informação (TI) abrange o uso de computadores,
+                 softwares, redes e outros sistemas para criar, processar, armazenar,
+                  proteger e transmitir dados e informações. É a base da nossa era digital, 
+                  fundamental para a comunicação instantânea, o acesso a grandes bancos de 
+                  dados e a automação de processos em empresas e na vida quotidiana.
+                  As áreas de TI incluem desenvolvimento de hardware, software, redes, 
+                  segurança de dados, análise de dados e inteligência artificial, sendo 
+                  essencial para a tomada de decisões, a eficiência e a inovação. </p>
+            </div>
           </div>
         </div>
-
         <Link to="/" className={styles.btn}>Voltar</Link>
       </main>
     </div>

@@ -15,26 +15,17 @@ export default function AccessibilityTools() {
     document.body.style.backgroundColor = highContrast ? "#000" : "#fff";
     document.body.style.transition = "all 0.3s ease";
 
-    // Texto normal: preto no modo alto contraste, branco no normal
-    document.body.style.color = highContrast ? "#000" : "#000"; // no modo normal e alto contraste texto preto (ajustar se quiser)
-    // Se quiser texto branco no normal: "#fff"
+    // Texto normal: preto em ambos os modos
+    document.body.style.color = "#000";
 
-    // Fonte do texto normal: menor no alto contraste, ou controlado pelo fontSize
-    document.body.style.fontSize = highContrast ? "12px" : `${fontSize}px`;
+    // Fonte do texto sempre controlada pelo fontSize
+    document.body.style.fontSize = `${fontSize}px`;
 
-    // Títulos: brancos e grandes no alto contraste, pretos normais no modo normal
+    // Títulos: brancos no contraste, pretos no normal
     const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
     headings.forEach(heading => {
-      heading.style.color = highContrast ? "#fff" : "#000";
-      heading.style.fontSize = highContrast ? "24px" : ""; // padrão normal
-
+      heading.style.color = highContrast ? "#5631f8ff" : "#000";
     });
-      // subtítulos (h2, h3, h4, h5, h6) preto no alto contraste, normal no normal
-  const subtitles = document.querySelectorAll("h2, h3, h4, h5, h6");
-  subtitles.forEach(subtitle => {
-    subtitle.style.color = highContrast ? "#000" : "#000";
-    subtitle.style.fontSize = highContrast ? "18px" : "";
-  });
 
   }, [fontSize, highContrast]);
 
@@ -53,9 +44,9 @@ export default function AccessibilityTools() {
       {/* Painel de acessibilidade */}
       {showTools && (
         <div style={panelStyle} aria-label="Ferramentas de acessibilidade">
-          <button style={buttonStyle} onClick={aumentarFonte} aria-label="Aumentar fonte" title="Aumentar fonte">A+</button>
-          <button style={buttonStyle} onClick={diminuirFonte} aria-label="Diminuir fonte" title="Diminuir fonte">A-</button>
-          <button style={buttonStyle} onClick={fontePadrao} aria-label="Fonte padrão" title="Fonte padrão">A</button>
+          <button style={buttonStyle} onClick={aumentarFonte}>A+</button>
+          <button style={buttonStyle} onClick={diminuirFonte}>A-</button>
+          <button style={buttonStyle} onClick={fontePadrao}>A</button>
 
           <button
             style={{

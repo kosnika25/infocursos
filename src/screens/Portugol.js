@@ -16,9 +16,9 @@ function Portugol() {
                     <div className={styles.contentIcon}>📝</div>
                     <div>
                         <h1 className={styles.contentTitle}>O que é linguagem Portugol?</h1>
-                        <p>Guia definitivo para iniciantes</p>
                     </div>
                 </div>
+     <div className={styles.card}>
 
                 <div className={styles.contentBody}>
                     <div className={styles.contentImage}>
@@ -32,7 +32,7 @@ function Portugol() {
                             Com o Portugol, você pode aprender estruturas de controle como condicionais (se-então-senão) e loops (enquanto, para), além de conceitos como variáveis, operadores e funções, tudo em um ambiente amigável e em português.</p>
                     </div>
                 </div>
-
+</div>
                 <Link to="/" className={styles.btn}>Voltar</Link>
             </main>
         </div>

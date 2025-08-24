@@ -18,6 +18,7 @@ function Algoritmo() {
             <h1 className={styles.contentTitle}>O que são algoritmos?</h1>
           </div>
         </div>
+  <div className={styles.card}>
 
         <div className={styles.contentBody}>
           <div className={styles.contentImage}>
@@ -30,7 +31,7 @@ function Algoritmo() {
             <p>Os algoritmos podem ser representados de várias formas: linguagem natural, fluxogramas, pseudocódigo...</p>
           </div>
         </div>
-
+</div>
         <Link to="/" className={styles.btn}>Voltar</Link>
       </main>
     </div>
