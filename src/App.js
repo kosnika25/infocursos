@@ -13,7 +13,9 @@ import VLibras from './Components/VLibras';
 import Tecnologia from './screens/Tecnologia';
 import Portugol from './screens/Portugol';
 import Algoritmo from './screens/Algoritimo';
-
+import MeusCursos from './screens/MeusCursos';
+import Cadastro from './screens/Cadastro';
+import TelaPricipal from './screens/TelaPricipal';
 // O componente App, que é o layout global
 function App() {
   return (
@@ -27,7 +29,8 @@ function App() {
         <main className="App-main">
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<TelaPricipal />} />
+              <Route path="home" element={<Home />} />
               <Route path="cursos" element={<Cursos />} />
               <Route path="noticias" element={<Noticias />} />
               <Route path="novidades" element={<Novidades />} />
@@ -36,7 +39,10 @@ function App() {
               <Route path="tecnologia" element={<Tecnologia />} />
               <Route path="Portugol" element={<Portugol />} />
               <Route path="algoritimo" element={<Algoritmo />} />
-                 <Route path="accessibilitytools" element={<AccessibilityTools />} />
+              <Route path="accessibilitytools" element={<AccessibilityTools />} />
+              <Route path="meuscursos" element={<MeusCursos />} />
+              <Route path="cadastro" element={<Cadastro />} />
+
             </Routes>
           </div>
         </main>

@@ -87,10 +87,9 @@ body {
     color: #120161;
 }
 
-.footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background-color: #f5f5f5;
-    margin-top: 2rem;
-}
-    
+
+
+    .btn{
+              margin-right: 20px; /* Adiciona 20px de espaço à direita */
+
+    }

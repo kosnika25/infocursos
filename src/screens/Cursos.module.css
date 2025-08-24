@@ -23,20 +23,24 @@
     overflow: hidden;
     text-align: left;
 }
-
 .courseImage {
-    height: 180px;
-    background-color: #f0f0f0;
+    height: 180px;                 /* altura do contêiner */
+    overflow: hidden;              /* corta excesso */
+    border-radius: 12px 12px 0 0;  /* arredonda topo do card */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f0f0f0;
 }
 
 .courseImage img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%;                  /* ocupa 100% do container */
+    object-fit: cover;             /* preenche o container mantendo proporção */
+    object-position: center;       /* centraliza a imagem */
+    display: block;                /* remove espaços extras do inline img */
 }
+
 
 .courseContent {
     padding: 1.5rem;

@@ -1,0 +1,142 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(90deg, #120161, #6a00f4);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.loginBtn {
+  background-color: #ff9800;
+  color: #120161;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.loginBtn:hover {
+  background-color: #e68900;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #120161;
+  margin-bottom: 20px;
+}
+
+.courseGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.courseCard {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.courseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.courseImage {
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 0 0;
+  background-color: #f0f0f0;
+}
+
+.courseImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.courseInfo {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.courseTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #120161;
+}
+
+.courseDesc {
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 50px;
+}
+
+.continueBtn {
+  margin-top: auto;
+  background-color: #120161;
+  color: white;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.continueBtn:hover {
+  background-color: #0a0140;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .courseGrid {
+    justify-content: center;
+  }
+  .courseCard {
+    width: 90%;
+  }
+  .courseImage {
+    height: 120px;
+  }
+}

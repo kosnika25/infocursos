@@ -30,6 +30,11 @@ function Home() {
               <p>Explore os links e navegue conosco nesta jornada de aprendizado.</p>
             </div>
             <a href="/cursos" className={styles.btn}>Explorar Cursos</a>
+
+            {/* Novo botão para acessar "Meus Cursos" */}
+            <a href="/meuscursos" className={`${styles.btn} ${styles.btnSecondary}`}>
+              Meus Cursos
+            </a>
           </div>
         </section>
 
