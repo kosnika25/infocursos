@@ -1,0 +1,45 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #120161;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.logoutBtn {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #120161;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logoutBtn:hover {
+  background-color: #0a0140;
+}

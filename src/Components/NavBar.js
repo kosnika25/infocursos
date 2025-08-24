@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styles from './NavBar.module.css'; // Certifique-se de que esse CSS está correto
+import React, { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import styles from './NavBar.module.css';
+import { auth } from '../firebase/connection';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 const NavBar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
-  const closeSidebar = () => {
-    setSidebarOpen(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    setMenuOpen(false);
+    navigate('/');
   };
 
   return (
@@ -18,36 +29,37 @@ const NavBar = () => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>Cursos Tecnologia</div>
 
-        {/* Ícone de menu hambúrguer */}
-        <button className={styles.menuButton} onClick={toggleSidebar}>
-          ☰
-        </button>
-
-        {/* Menu desktop */}
         <ul className={styles.links_list}>
-          <li><NavLink to="/" onClick={closeSidebar}>Home</NavLink></li>
-          <li><NavLink to="/cursos" onClick={closeSidebar}>Cursos</NavLink></li>
-          <li><NavLink to="/noticias" onClick={closeSidebar}>Notícias</NavLink></li>
-          <li><NavLink to="/novidades" onClick={closeSidebar}>Novidades</NavLink></li>
-          <li><NavLink to="/contato" onClick={closeSidebar}>Contato</NavLink></li>
-          <li><NavLink to="/login" onClick={closeSidebar}>Login</NavLink></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/cursos">Cursos</NavLink></li>
+          <li><NavLink to="/noticias">Notícias</NavLink></li>
+          <li><NavLink to="/novidades">Novidades</NavLink></li>
+          <li><NavLink to="/contato">Contato</NavLink></li>
+
+          {user ? (
+            <li className={styles.profileMenu}>
+              <button className={styles.profileBtn} onClick={toggleMenu}>
+                Perfil
+              </button>
+              {menuOpen && (
+                <div className={styles.dropdown}>
+                  <div className={styles.userInfo}>
+                    <p><strong>{user.displayName || "Usuário"}</strong></p>
+                    <p>{user.email}</p>
+                  </div>
+                  <NavLink to="/perfil" className={styles.dropdownLink} onClick={() => setMenuOpen(false)}>
+                    Ver Perfil
+                  </NavLink>
+                  <button className={styles.dropdownLink} onClick={handleLogout}>
+                    Sair
+                  </button>
+                </div>
+              )}
+            </li>
+          ) : (
+            <li><NavLink to="/login">Login</NavLink></li>
+          )}
         </ul>
-
-        {/* Sidebar mobile */}
-        <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
-          <button className={styles.closeButton} onClick={closeSidebar}>×</button>
-          <ul>
-            <li><NavLink to="/" onClick={closeSidebar}>Home</NavLink></li>
-            <li><NavLink to="/cursos" onClick={closeSidebar}>Cursos</NavLink></li>
-            <li><NavLink to="/noticias" onClick={closeSidebar}>Notícias</NavLink></li>
-            <li><NavLink to="/novidades" onClick={closeSidebar}>Novidades</NavLink></li>
-            <li><NavLink to="/contato" onClick={closeSidebar}>Contato</NavLink></li>
-            <li><NavLink to="/login" onClick={closeSidebar}>Login</NavLink></li>
-          </ul>
-        </div>
-
-        {/* Overlay para clicar fora e fechar */}
-        {sidebarOpen && <div className={styles.overlay} onClick={closeSidebar}></div>}
       </nav>
     </header>
   );

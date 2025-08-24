@@ -16,6 +16,7 @@ import Algoritmo from './screens/Algoritimo';
 import MeusCursos from './screens/MeusCursos';
 import Cadastro from './screens/Cadastro';
 import TelaPricipal from './screens/TelaPricipal';
+import Perfil from './screens/Perfil';
 // O componente App, que é o layout global
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
               <Route path="accessibilitytools" element={<AccessibilityTools />} />
               <Route path="meuscursos" element={<MeusCursos />} />
               <Route path="cadastro" element={<Cadastro />} />
-
+              <Route path="perfil" element={<Perfil />} />
             </Routes>
           </div>
         </main>
