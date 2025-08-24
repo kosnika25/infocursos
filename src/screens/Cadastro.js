@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './Cadastro.module.css';
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
+import Libras from '../Components/VLibrasWidget';
 import { Link, useNavigate } from 'react-router-dom';
 
 // Importa Firebase

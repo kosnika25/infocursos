@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para VLibras - Versão melhorada */
+[vw] {
+  position: fixed !important;
+  z-index: 999999 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[vw-access-button] {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  cursor: pointer !important;
+  display: block !important;
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  background: #1976d2 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+  border: none !important;
+  outline: none !important;
+  transition: all 0.3s ease !important;
+}
+
+[vw-access-button]:hover {
+  background: #1565c0 !important;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+[vw-plugin-wrapper] {
+  position: fixed !important;
+  z-index: 999998 !important;
+}
+
+.vw-plugin-top-wrapper {
+  z-index: 999997 !important;
+}
+
+/* Garantir que o VLibras não seja afetado por outros estilos */
+[vw] * {
+  box-sizing: border-box !important;
 }

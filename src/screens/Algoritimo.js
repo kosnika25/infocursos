@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Algoritimo.module.css'
 import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
+import Libras from '../Components/VLibrasWidget';
 import { Link } from 'react-router-dom';
 
 function Algoritmo() {
