@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './MeusCursos.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function MeusCursos() {
@@ -43,8 +41,7 @@ function MeusCursos() {
 
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+     
 
       <main className={styles.mainContent}>
         <h1 className={styles.pageTitle}>Meus Cursos</h1>

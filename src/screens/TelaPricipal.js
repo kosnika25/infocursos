@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TelaPrincipal.module.css";
-
 function TelaPricipal() {
+
   const cursos = [
     {
       id: 1,
@@ -30,6 +30,7 @@ function TelaPricipal() {
   ];
 
   return (
+    
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Plataforma de Cursos de TI</h1>

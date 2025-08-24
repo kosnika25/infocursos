@@ -1,14 +1,9 @@
 // Home.js
 import React from 'react';
 import styles from './Home.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
-
 function Home() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
 
       <main className={styles.mainContent}>
         {/* Seção de boas-vindas */}

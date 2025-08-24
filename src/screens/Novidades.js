@@ -3,14 +3,12 @@
 // Novidades.js
 import React from 'react';
 import styles from './Novidades.module.css'; // Crie o CSS correspondente
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
+
 
 function Novidades() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+      
 
       <main className={styles.mainContent}>
         {/* Cabeçalho da página */}

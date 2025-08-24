@@ -1,14 +1,12 @@
 // Noticias.js
 import React from 'react';
 import styles from './Noticias.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
+
 
 function Noticias() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+   
 
       <main className={styles.mainContent}>
         <h1 className={styles.pageTitle}>Notícias</h1>

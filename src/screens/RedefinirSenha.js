@@ -1,15 +1,13 @@
 // RedefinirSenha.js
 import React from 'react';
 import styles from './RedefinirSenha.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
+
 import { Link } from 'react-router-dom';
 
 function RedefinirSenha() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+   
 
       <main className={styles.mainContent}>
         <div className={styles.passwordResetForm}>

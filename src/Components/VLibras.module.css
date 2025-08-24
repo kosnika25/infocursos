@@ -1,0 +1,20 @@
+/* src/Components/VLibras.module.css */
+.vlibras-button-wrapper {
+  position: fixed !important;
+  right: 30px !important;
+  bottom: 30px !important;
+  z-index: 9999 !important;
+}
+
+/* Garante que o botão seja visível */
+#vlibras-plugin {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Estilo para o iframe do VLibras */
+.vw-plugin-wrapper iframe {
+  display: block !important;
+  visibility: visible !important;
+}

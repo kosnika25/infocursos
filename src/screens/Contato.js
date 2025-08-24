@@ -1,15 +1,12 @@
 // Contato.js
 import React from 'react';
 import styles from './Contato.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibras';
 import { Link } from 'react-router-dom';
 
 function Contato() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+    
 
       <main className={`${styles.mainContent} ${styles.contactPage}`}>
         <div className={styles.contentHeader}>

@@ -1,8 +1,6 @@
 // Login.js
 import React, { useState } from "react";
 import styles from "./Login.module.css";
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from "../Components/VLibras";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/connection"; // conexão com Firebase

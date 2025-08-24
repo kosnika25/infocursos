@@ -29,37 +29,40 @@ const NavBar = () => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>Cursos Tecnologia</div>
 
-        <ul className={styles.links_list}>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/cursos">Cursos</NavLink></li>
-          <li><NavLink to="/noticias">Notícias</NavLink></li>
-          <li><NavLink to="/novidades">Novidades</NavLink></li>
-          <li><NavLink to="/contato">Contato</NavLink></li>
+<ul className={styles.links_list}>
+  <li>
+    <NavLink to={user ? "/home" : "/"}>Home</NavLink>
+  </li>
+  <li><NavLink to="/cursos">Cursos</NavLink></li>
+  <li><NavLink to="/noticias">Notícias</NavLink></li>
+  <li><NavLink to="/novidades">Novidades</NavLink></li>
+  <li><NavLink to="/contato">Contato</NavLink></li>
 
-          {user ? (
-            <li className={styles.profileMenu}>
-              <button className={styles.profileBtn} onClick={toggleMenu}>
-                Perfil
-              </button>
-              {menuOpen && (
-                <div className={styles.dropdown}>
-                  <div className={styles.userInfo}>
-                    <p><strong>{user.displayName || "Usuário"}</strong></p>
-                    <p>{user.email}</p>
-                  </div>
-                  <NavLink to="/perfil" className={styles.dropdownLink} onClick={() => setMenuOpen(false)}>
-                    Ver Perfil
-                  </NavLink>
-                  <button className={styles.dropdownLink} onClick={handleLogout}>
-                    Sair
-                  </button>
-                </div>
-              )}
-            </li>
-          ) : (
-            <li><NavLink to="/login">Login</NavLink></li>
-          )}
-        </ul>
+  {user ? (
+    <li className={styles.profileMenu}>
+      <button className={styles.profileBtn} onClick={toggleMenu}>
+        Perfil
+      </button>
+      {menuOpen && (
+        <div className={styles.dropdown}>
+          <div className={styles.userInfo}>
+            <p><strong>{user.displayName || "Usuário"}</strong></p>
+            <p>{user.email}</p>
+          </div>
+          <NavLink to="/perfil" className={styles.dropdownLink} onClick={() => setMenuOpen(false)}>
+            Ver Perfil
+          </NavLink>
+          <button className={styles.dropdownLink} onClick={handleLogout}>
+            Sair
+          </button>
+        </div>
+      )}
+    </li>
+  ) : (
+    <li><NavLink to="/login">Login</NavLink></li>
+  )}
+</ul>
+
       </nav>
     </header>
   );

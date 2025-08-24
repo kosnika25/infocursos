@@ -1,15 +1,12 @@
 // EsqueceuSenha.js
 import React from 'react';
 import styles from './EsqueceuSenha.module.css';
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/Libras';
 import { Link } from 'react-router-dom';
 
 function EsqueceuSenha() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+ 
 
       <main className={styles.mainContent}>
         <div className={styles.passwordResetForm}>
