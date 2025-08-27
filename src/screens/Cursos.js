@@ -1,82 +1,59 @@
-import React from 'react';
-import styles from './Cursos.module.css';
+// src/screens/Cursos.js
+import React from "react";
+import "./Cursos.css";
 
 function Cursos() {
-    return (
+  return (
+    <div className="cursos-container">
+      <h1 className="titulo">Nossos Cursos</h1>
+      <div className="cursos-grid">
+        {/* Engenharia de Software */}
+        <div className="curso-card">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/engenharia-software.jpg`}
+            alt="Engenharia de Software"
+          />
+          <h2>Engenharia de Software</h2>
+        </div>
 
+        {/* Gestão de TI */}
+        <div className="curso-card">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/gestao-ti.webp`}
+            alt="Gestão de TI"
+          />
+          <h2>Gestão de TI</h2>
+        </div>
 
+        {/* Sistemas para Internet */}
+        <div className="curso-card">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/sistemas-internet.jpg`}
+            alt="Sistemas para Internet"
+          />
+          <h2>Sistemas para Internet</h2>
+        </div>
 
-        <main className={styles.mainContent}>
-            <h1 className={styles.pageTitle}>Cursos Especializados</h1>
+        {/* Análise e Desenvolvimento de Sistemas */}
+        <div className="curso-card">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/analise-sistemas.jpg`}
+            alt="Análise e Desenvolvimento de Sistemas"
+          />
+          <h2>Análise e Desenvolvimento de Sistemas</h2>
+        </div>
 
-            <div className={styles.coursesGrid}>
-                {/* Curso 1 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.courseImage}>
-                        <img src="/Engenharia de Software.jpg" alt="Engenharia de Software" />
-                    </div>
-                    <div className={styles.courseContent}>
-                        <h3 className={styles.courseTitle}>Engenharia de Software</h3>
-                        <p>
-                            Engenharia de software é uma área da computação que se dedica ao desenvolvimento, manutenção e
-                            gerenciamento de programas.
-                        </p>
-                        <a href="#" className={styles.btn}>Saiba mais</a>
-                    </div>
-                </div>
-
-                {/* Curso 2 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.courseImage}>
-                        <img src="/Gestão de TI.webp" alt="Gestão de TI" />
-                    </div>
-                    <div className={styles.courseContent}>
-                        <h3 className={styles.courseTitle}>Gestão de TI</h3>
-                        <p>
-                            A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e
-                            sistemas de TI de uma organização.
-                        </p>
-                        <a href="#" className={styles.btn}>Saiba mais</a>
-                    </div>
-                </div>
-
-                {/* Curso 3 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.courseImage}>
-                        <img src="/Sistemas para Internet.jpg" alt="Sistemas para Internet" />
-                    </div>
-                    <div className={styles.courseContent}>
-                        <h3 className={styles.courseTitle}>Sistemas para Internet</h3>
-                        <p>
-                            A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e
-                            sistemas de TI de uma organização.
-                        </p>
-                        <a href="#" className={styles.btn}>Saiba mais</a>
-                    </div>
-                </div>
-
-                {/* Curso 4 */}
-                <div className={styles.courseCard}>
-                    <div className={styles.courseImage}>
-                        <img src="/ti.jpeg" alt="TI" />
-                    </div>
-                    <div className={styles.courseContent}>
-                        <h3 className={styles.courseTitle}>TI</h3>
-                        <p>
-                            A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e
-                            sistemas de TI de uma organização.
-                        </p>
-                        <a href="#" className={styles.btn}>Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-
-            <a href="/home" className={`${styles.btn} ${styles.btnSecondary}`}>Voltar</a>
-        </main>
-    );
+        {/* Banco de Dados */}
+        <div className="curso-card">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/banco-dados.jpg`}
+            alt="Banco de Dados"
+          />
+          <h2>Banco de Dados</h2>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-
-    
 
 export default Cursos;
