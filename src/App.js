@@ -51,8 +51,8 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
-      {/* 🚨 Alterado de BrowserRouter para HashRouter */}
-      <HashRouter>
+      {/* 🚨 Usando HashRouter para GitHub Pages */}
+      <HashRouter basename="/">
         <AppContent />
       </HashRouter>
     </div>
