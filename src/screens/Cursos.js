@@ -1,6 +1,6 @@
 // src/screens/Cursos.js
 import React from "react";
-import "./Cursos.css";
+import "./Cursos.module.css";
 
 function Cursos() {
   return (
