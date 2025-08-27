@@ -1,58 +1,82 @@
 // src/screens/Cursos.js
 import React from "react";
-import "./Cursos.module.css";
+import styles from "./Cursos.module.css";
 
 function Cursos() {
   return (
-    <div className="cursos-container">
-      <h1 className="titulo">Nossos Cursos</h1>
-      <div className="cursos-grid">
-        {/* Engenharia de Software */}
-        <div className="curso-card">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/engenharia-software.jpg`}
-            alt="Engenharia de Software"
-          />
-          <h2>Engenharia de Software</h2>
+    <main className={styles.mainContent}>
+      <h1 className={styles.pageTitle}>Cursos Especializados</h1>
+
+      <div className={styles.coursesGrid}>
+        {/* Curso 1 */}
+        <div className={styles.courseCard}>
+          <div className={styles.courseImage}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/engenharia-software.jpg`}
+              alt="Engenharia de Software"
+            />
+          </div>
+          <div className={styles.courseContent}>
+            <h3 className={styles.courseTitle}>Engenharia de Software</h3>
+            <p>
+              Engenharia de software é uma área da computação que se dedica ao desenvolvimento, manutenção e gerenciamento de programas.
+            </p>
+          </div>
         </div>
 
-        {/* Gestão de TI */}
-        <div className="curso-card">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/gestao-ti.webp`}
-            alt="Gestão de TI"
-          />
-          <h2>Gestão de TI</h2>
+        {/* Curso 2 */}
+        <div className={styles.courseCard}>
+          <div className={styles.courseImage}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/gestao-ti.webp`}
+              alt="Gestão de TI"
+            />
+          </div>
+          <div className={styles.courseContent}>
+            <h3 className={styles.courseTitle}>Gestão de TI</h3>
+            <p>
+              A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e sistemas de TI de uma organização.
+            </p>
+          </div>
         </div>
 
-        {/* Sistemas para Internet */}
-        <div className="curso-card">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/sistemas-internet.jpg`}
-            alt="Sistemas para Internet"
-          />
-          <h2>Sistemas para Internet</h2>
+        {/* Curso 3 */}
+        <div className={styles.courseCard}>
+          <div className={styles.courseImage}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/sistemas-internet.jpg`}
+              alt="Sistemas para Internet"
+            />
+          </div>
+          <div className={styles.courseContent}>
+            <h3 className={styles.courseTitle}>Sistemas para Internet</h3>
+            <p>
+              A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e sistemas de TI de uma organização.
+            </p>
+          </div>
         </div>
 
-        {/* Análise e Desenvolvimento de Sistemas */}
-        <div className="curso-card">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/analise-sistemas.jpg`}
-            alt="Análise e Desenvolvimento de Sistemas"
-          />
-          <h2>Análise e Desenvolvimento de Sistemas</h2>
-        </div>
-
-        {/* Banco de Dados */}
-        <div className="curso-card">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/banco-dados.jpg`}
-            alt="Banco de Dados"
-          />
-          <h2>Banco de Dados</h2>
+        {/* Curso 4 */}
+        <div className={styles.courseCard}>
+          <div className={styles.courseImage}>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/ti.jpeg`}
+              alt="TI"
+            />
+          </div>
+          <div className={styles.courseContent}>
+            <h3 className={styles.courseTitle}>TI</h3>
+            <p>
+              A gestão da tecnologia da informação (TI) é a área responsável por administrar os recursos e sistemas de TI de uma organização.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+
+      <a href="/home" className={`${styles.btn} ${styles.btnSecondary}`}>
+        Voltar
+      </a>
+    </main>
   );
 }
 
