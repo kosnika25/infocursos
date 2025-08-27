@@ -1,8 +1,11 @@
 // Home.js
 import React from 'react';
 import styles from './Home.module.css';
+import AccessibilityTools from '../Components/AccessibilityTools';
 function Home() {
+    <AccessibilityTools />
   return (
+  
     <div className={styles.container}>
 
       <main className={styles.mainContent}>

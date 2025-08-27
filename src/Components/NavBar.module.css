@@ -5,7 +5,7 @@
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 
 .navbar {
@@ -22,30 +22,32 @@
   font-weight: bold;
 }
 
-.links_list {
+/* Navbar desktop */
+.navLinks {
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
   list-style: none;
   align-items: center;
 }
 
-.links_list li a,
+.navLinks li a,
 .profileBtn {
-  color: white;
   text-decoration: none;
+  color: white;
   font-weight: bold;
-  cursor: pointer;
   background: none;
   border: none;
+  cursor: pointer;
   font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.links_list li a:hover,
+.navLinks li a:hover,
 .profileBtn:hover {
-  color: #ddd;
+  color: #ffcc00;
 }
 
-/* Menu flutuante do Perfil */
+/* Dropdown perfil */
 .profileMenu {
   position: relative;
 }
@@ -54,35 +56,109 @@
   position: absolute;
   top: 2.5rem;
   right: 0;
-  background: white;
-  color: #120161;
+  background: #1a1a2e;
+  color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  min-width: 180px;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
-  z-index: 100;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 120;
 }
 
 .userInfo {
-  padding: 10px 15px;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
   font-size: 0.9rem;
-  color: #120161;
 }
 
-.dropdownLink {
-  padding: 10px 15px;
-  text-align: left;
-  font-size: 0.95rem;
-  color: #000000 !important; /* Preto com !important */
+.logoutBtn {
+  margin-top: 10px;
+  background: #e63946;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logoutBtn:hover {
+  background: #c1121f;
+}
+
+/* Botão hamburguer */
+.hamburger {
+  font-size: 1.8rem;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
-  text-decoration: none;
+  display: none;
+  z-index: 110;
 }
 
-.dropdownLink:hover {
-  background-color: #f0f0f0;
-  color: #000000 !important; /* Preto no hover também */
+/* Sidebar mobile */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background-color: #1a1a2e;
+  color: white;
+  padding-top: 4rem;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  z-index: 105;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background: #252547;
+}
+
+.logoutWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sidebar .logoutBtn {
+  width: 80%;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* navbar desktop escondida */
+  }
+  .hamburger {
+    display: block;
+  }
 }
