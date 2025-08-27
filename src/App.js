@@ -1,5 +1,5 @@
 // src/App.js
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Cursos from './screens/Cursos';
 import Noticias from './screens/Noticias';
@@ -17,8 +17,8 @@ import MeusCursos from './screens/MeusCursos';
 import Cadastro from './screens/Cadastro';
 import TelaPricipal from './screens/TelaPricipal';
 import Perfil from './screens/Perfil';
-function AppContent() {
 
+function AppContent() {
   return (
     <div>
       <NavBar />
@@ -51,9 +51,10 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* 🚨 Alterado de BrowserRouter para HashRouter */}
+      <HashRouter>
         <AppContent />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

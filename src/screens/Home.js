@@ -1,18 +1,17 @@
-// Home.js
+// src/screens/Home.js
 import React from 'react';
 import styles from './Home.module.css';
 import AccessibilityTools from '../Components/AccessibilityTools';
-function Home() {
-    <AccessibilityTools />
-  return (
-  
-    <div className={styles.container}>
+import { Link } from 'react-router-dom';  // 🚨 importado Link para navegação sem reload
 
+function Home() {
+  return (
+    <div className={styles.container}>
+      <AccessibilityTools />
       <main className={styles.mainContent}>
         {/* Seção de boas-vindas */}
         <section>
           <h1 className={styles.pageTitle}>Bem-vindo à Plataforma de Cursos de TI</h1>
-
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <div className={styles.cardIcon}>👋</div>
@@ -27,12 +26,12 @@ function Home() {
               </p>
               <p>Explore os links e navegue conosco nesta jornada de aprendizado.</p>
             </div>
-            <a href="/cursos" className={styles.btn}>Explorar Cursos</a>
 
-            {/* Novo botão para acessar "Meus Cursos" */}
-            <a href="/meuscursos" className={`${styles.btn} ${styles.btnSecondary}`}>
+            {/* 🚨 Alterado de <a href> para <Link to> */}
+            <Link to="/cursos" className={styles.btn}>Explorar Cursos</Link>
+            <Link to="/meuscursos" className={`${styles.btn} ${styles.btnSecondary}`}>
               Meus Cursos
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -45,23 +44,23 @@ function Home() {
             <div className={styles.cardContent}>
               <p>
                 A Tecnologia da Informação (TI) é um dos pilares fundamentais da era digital,
-                desempenhando um papel estratégico na inovação, automação e otimização de processos
-                em empresas e na sociedade.
+                desempenhando um papel estratégico na inovação, automação e otimização
+                de processos em empresas e na sociedade.
               </p>
             </div>
-            <a href="/tecnologia" className={styles.btn}>Saiba mais</a>
+            <Link to="/tecnologia" className={styles.btn}>Saiba mais</Link>
           </div>
 
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>O que é linguagem Portugol?</h3>
             <div className={styles.cardContent}>
               <p>
-                A programação é uma das habilidades mais importantes atualmente.
-                Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida,
+                A programação é uma das habilidades mais importantes atualmente. Hoje em dia,
+                a tecnologia está presente em praticamente todos os aspectos da nossa vida,
                 desde aplicativos de celular até sistemas complexos de inteligência artificial.
               </p>
             </div>
-            <a href="/portugol" className={styles.btn}>Saiba mais</a>
+            <Link to="/portugol" className={styles.btn}>Saiba mais</Link>
           </div>
 
           <div className={styles.card}>
@@ -69,11 +68,11 @@ function Home() {
             <div className={styles.cardContent}>
               <p>
                 Antes de tudo: um erro muito comum é confundir as palavras 'algoritmo' e 'logaritmo'.
-                São palavras parecidas, mas com significado bem diferente:
-                'Logaritmo' é uma ferramenta matemática. Algoritmo é uma ferramenta de computação.
+                São palavras parecidas, mas com significado bem diferente: 'Logaritmo' é uma ferramenta matemática.
+                Algoritmo é uma ferramenta de computação.
               </p>
             </div>
-            <a href="/algoritimo" className={styles.btn}>Saiba mais</a>
+            <Link to="/algoritimo" className={styles.btn}>Saiba mais</Link>
           </div>
         </section>
       </main>
