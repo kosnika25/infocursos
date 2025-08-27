@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, createElement } from 'react';
+// src/App.js
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './screens/Home';
 import Cursos from './screens/Cursos';
 import Noticias from './screens/Noticias';
@@ -17,57 +17,44 @@ import MeusCursos from './screens/MeusCursos';
 import Cadastro from './screens/Cadastro';
 import TelaPricipal from './screens/TelaPricipal';
 import Perfil from './screens/Perfil';
-import VLibrasWidget from './Components/VLibrasWidget';
-import { useVLibras } from './hooks/useVLibras';
-
-// Componente interno para lidar com mudanças de rota
 function AppContent() {
-  const location = useLocation();
-  const { updateVLibras } = useVLibras();
 
-  // Atualizar VLibras quando a rota mudar
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      updateVLibras();
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [location.pathname, updateVLibras]);
-
-  return createElement('div', null,
-    createElement(NavBar),
-    createElement(AccessibilityTools),
-    createElement('main', { className: 'App-main' },
-      createElement('div', { className: 'container' },
-        createElement(Routes, null,
-          createElement(Route, { path: '/', element: createElement(TelaPricipal) }),
-          createElement(Route, { path: 'home', element: createElement(Home) }),
-          createElement(Route, { path: 'cursos', element: createElement(Cursos) }),
-          createElement(Route, { path: 'noticias', element: createElement(Noticias) }),
-          createElement(Route, { path: 'novidades', element: createElement(Novidades) }),
-          createElement(Route, { path: 'contato', element: createElement(Contato) }),
-          createElement(Route, { path: 'login', element: createElement(Login) }),
-          createElement(Route, { path: 'tecnologia', element: createElement(Tecnologia) }),
-          createElement(Route, { path: 'portugol', element: createElement(Portugol) }),
-          createElement(Route, { path: 'algoritimo', element: createElement(Algoritmo) }),
-          createElement(Route, { path: 'accessibilitytools', element: createElement(AccessibilityTools) }),
-          createElement(Route, { path: 'meuscursos', element: createElement(MeusCursos) }),
-          createElement(Route, { path: 'cadastro', element: createElement(Cadastro) }),
-          createElement(Route, { path: 'perfil', element: createElement(Perfil) })
-        )
-      )
-    ),
-    createElement(Footer),
-    // VLibras Widget - deve ficar fora do container para funcionar corretamente
-    createElement(VLibrasWidget)
+  return (
+    <div>
+      <NavBar />
+      <AccessibilityTools />
+      <main className="App-main">
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<TelaPricipal />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cursos" element={<Cursos />} />
+            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/novidades" element={<Novidades />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/tecnologia" element={<Tecnologia />} />
+            <Route path="/portugol" element={<Portugol />} />
+            <Route path="/algoritimo" element={<Algoritmo />} />
+            <Route path="/accessibilitytools" element={<AccessibilityTools />} />
+            <Route path="/meuscursos" element={<MeusCursos />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/perfil" element={<Perfil />} />
+          </Routes>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
 function App() {
-  return createElement('div', { className: 'App' },
-    createElement(BrowserRouter, null,
-      createElement(AppContent)
-    )
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </div>
   );
 }
 

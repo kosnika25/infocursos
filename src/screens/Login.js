@@ -25,8 +25,8 @@ function Login() {
 
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+      
+      
 
       <main className={styles.mainContent}>
         <div className={styles.loginForm}>

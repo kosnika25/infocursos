@@ -1,15 +1,13 @@
 // Algoritmo.js
 import React from 'react';
 import styles from './Algoritimo.module.css'
-import AccessibilityTools from "../Components/AccessibilityTools";
-import Libras from '../Components/VLibrasWidget';
+
 import { Link } from 'react-router-dom';
 
 function Algoritmo() {
   return (
     <div className={styles.container}>
-      <AccessibilityTools />
-      <Libras />
+  
 
       <main className={`${styles.mainContent} ${styles.contentPage}`}>
         <div className={styles.contentHeader}>
