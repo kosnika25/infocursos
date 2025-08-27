@@ -1,7 +1,7 @@
 // src/screens/Cursos.js
 import React from "react";
 import styles from "./Cursos.module.css";
-
+//teste
 function Cursos() {
   return (
     <main className={styles.mainContent}>
