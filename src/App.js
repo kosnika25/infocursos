@@ -1,4 +1,3 @@
-// src/App.js
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Cursos from './screens/Cursos';
@@ -21,7 +20,7 @@ import Perfil from './screens/Perfil';
 function AppContent() {
   return (
     <div>
-      <NavBar />
+      <NavBar /> {/* ✅ Isso está agora dentro de <HashRouter>, então os hooks funcionam */}
       <AccessibilityTools />
       <main className="App-main">
         <div className="container">
@@ -40,6 +39,8 @@ function AppContent() {
             <Route path="/meuscursos" element={<MeusCursos />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/perfil" element={<Perfil />} />
+            {/* ✅ Rota coringa para evitar tela branca se a rota não existir */}
+            <Route path="*" element={<TelaPricipal />} />
           </Routes>
         </div>
       </main>
@@ -51,6 +52,7 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
+      {/* ✅ HashRouter sem basename — ideal para GitHub Pages */}
       <HashRouter>
         <AppContent />
       </HashRouter>
@@ -58,4 +60,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // ✅ Exportando o componente que contém o <HashRouter>
