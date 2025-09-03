@@ -48,15 +48,6 @@ function AppContent() {
   );
 }
 
-function App() {
-  return (
-    <div className="App">
-      {/* 🚨 Usando HashRouter para GitHub Pages */}
-      <HashRouter basename="/infocursos">
-        <AppContent />
-      </HashRouter>
-    </div>
-  );
-}
+
 
 export default App;
