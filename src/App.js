@@ -51,12 +51,11 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
-      {/* 🚨 Usando HashRouter para GitHub Pages */}
-      <HashRouter basename="/infocursos">
+      <HashRouter>
         <AppContent />
       </HashRouter>
     </div>
   );
 }
 
-export default AppContent;
+export default App;
