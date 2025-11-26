@@ -31,7 +31,7 @@ function Portugol() {
                     </div>
                 </div>
 </div>
-                <Link to="/" className={styles.btn}>Voltar</Link>
+                <Link to="/Home" className={styles.btn}>Voltar</Link>
             </main>
         </div>
     );
