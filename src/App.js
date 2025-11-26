@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 // src/App.js
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-=======
 import { HashRouter, Routes, Route } from 'react-router-dom';
->>>>>>> bbc73c51efc89a0bc7666a7a4491ef657ec6df8b
 import Home from './screens/Home';
 import Cursos from './screens/Cursos';
 import Noticias from './screens/Noticias';
@@ -25,7 +21,7 @@ import Perfil from './screens/Perfil';
 function AppContent() {
   return (
     <div>
-      <NavBar /> {/* ✅ Isso está agora dentro de <HashRouter>, então os hooks funcionam */}
+      <NavBar />
       <AccessibilityTools />
       <main className="App-main">
         <div className="container">
@@ -44,8 +40,8 @@ function AppContent() {
             <Route path="/meuscursos" element={<MeusCursos />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/perfil" element={<Perfil />} />
-            {/* ✅ Rota coringa para evitar tela branca se a rota não existir */}
-            <Route path="*" element={<TelaPricipal />} />
+            {/* Rota coringa para evitar tela branca */}
+            <Route path="*" element={<TelaPrincipal />} />
           </Routes>
         </div>
       </main>
@@ -57,21 +53,12 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      {/* Use HashRouter para GitHub Pages */}
-      <BrowserRouter basename="/infocursos">
-=======
-      {/* ✅ HashRouter sem basename — ideal para GitHub Pages */}
+      {/* ✅ HashRouter para GitHub Pages */}
       <HashRouter>
->>>>>>> bbc73c51efc89a0bc7666a7a4491ef657ec6df8b
         <AppContent />
       </HashRouter>
     </div>
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App; // ✅ Exportando o componente que contém o <HashRouter>
->>>>>>> bbc73c51efc89a0bc7666a7a4491ef657ec6df8b
