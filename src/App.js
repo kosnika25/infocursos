@@ -1,5 +1,5 @@
 // src/App.js
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Cursos from './screens/Cursos';
 import Noticias from './screens/Noticias';
@@ -15,10 +15,10 @@ import Portugol from './screens/Portugol';
 import Algoritmo from './screens/Algoritimo';
 import MeusCursos from './screens/MeusCursos';
 import Cadastro from './screens/Cadastro';
-import TelaPricipal from './screens/TelaPricipal';
+import TelaPrincipal from './screens/TelaPrincipal';
 import Perfil from './screens/Perfil';
-function AppContent() {
 
+function AppContent() {
   return (
     <div>
       <NavBar />
@@ -26,7 +26,7 @@ function AppContent() {
       <main className="App-main">
         <div className="container">
           <Routes>
-            <Route path="/" element={<TelaPricipal />} />
+            <Route path="/" element={<TelaPrincipal />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/noticias" element={<Noticias />} />
@@ -51,7 +51,8 @@ function AppContent() {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* Use HashRouter para GitHub Pages */}
+      <BrowserRouter basename="/infocursos">
         <AppContent />
       </BrowserRouter>
     </div>

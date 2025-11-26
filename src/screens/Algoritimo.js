@@ -20,7 +20,7 @@ function Algoritmo() {
 
         <div className={styles.contentBody}>
           <div className={styles.contentImage}>
-            <img src="/algoritmo.webp" alt="Algoritmos" />
+<img src={`${process.env.PUBLIC_URL}/algoritmo.webp`} alt="TI" />
           </div>
           <div className={styles.contentText}>
             <p>Antes de tudo: um erro muito comum é confundir 'algoritmo' e 'logaritmo'...</p>

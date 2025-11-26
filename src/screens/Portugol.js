@@ -20,7 +20,7 @@ function Portugol() {
 
                 <div className={styles.contentBody}>
                     <div className={styles.contentImage}>
-                        <img src="/portugol.webp" alt="Linguagem Portugol" />
+<img src={`${process.env.PUBLIC_URL}/portugol.webp`} alt="TI" />
                     </div>
                     <div className={styles.contentText}>
                         <p>A programação é uma das habilidades mais importantes atualmente. Hoje em dia, a tecnologia está presente em praticamente todos os aspectos da nossa vida, desde aplicativos de celular até sistemas complexos de inteligência artificial.<br></br>

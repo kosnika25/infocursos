@@ -20,7 +20,7 @@ function Tecnologia() {
         <div className={styles.card}>
           <div className={styles.contentBody}>
             <div className={styles.contentImage}>
-              <img src="/ti.jpeg" alt="Tecnologia da Informação" />
+<img src={`${process.env.PUBLIC_URL}/ti.jpeg`} alt="TI" />
             </div>
             <div className={styles.contentText}>
               <p>A Tecnologia da Informação (TI) abrange o uso de computadores,

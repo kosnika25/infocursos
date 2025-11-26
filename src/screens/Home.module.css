@@ -1,95 +1,387 @@
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
+/* Home.module.css */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0f172a;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
+/* Main Content */
 .mainContent {
-    padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* Welcome Section */
+.welcomeSection {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.welcomeHeader {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .pageTitle {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #120161;
-    text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: left; /* 👈 força alinhamento do texto e botões à esquerda */
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
 }
 
-.cardHeader {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    text-align: left; /* 👈 garante alinhamento mesmo no header */
+.welcomeContainer {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
 }
 
-.cardContent {
-    text-align: left; /* 👈 garante que parágrafos fiquem à esquerda */
+.welcomeContainer:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.btn {
-    display: inline-block;
-    background-color: #120161;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 1rem;
-    text-align: left; /* 👈 botão acompanha o alinhamento */
+.userGreeting {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-
-
-.cardIcon {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    background-color: #120161;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-.cardTitle {
-    font-size: 1.5rem;
-    color: #120161;
+.userInfo {
+  flex: 1;
 }
 
+.greetingTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
 
+.greetingText {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+}
 
+.welcomeContent {
+  margin-bottom: 2.5rem;
+}
 
-.btn:hover {
-    background-color: #0a0140;
+.welcomeMessage {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 1rem 0;
+}
+
+.quickActions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.actionPrimary, .actionSecondary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.actionPrimary {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #0f172a;
+}
+
+.actionPrimary:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border-color: transparent;
+}
+
+.actionSecondary {
+  background: #fff;
+  color: #0f172a;
+}
+
+.actionSecondary:hover {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+  border-color: transparent;
+}
+
+.actionIcon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.actionPrimary:hover .actionIcon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.actionSecondary:hover .actionIcon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.actionContent {
+  flex: 1;
+}
+
+.actionTitle {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.actionDesc {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  opacity: 0.8;
+}
+
+.actionPrimary:hover .actionDesc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.actionSecondary:hover .actionDesc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.arrowIcon {
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.actionPrimary:hover .arrowIcon,
+.actionSecondary:hover .arrowIcon {
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+.actionPrimary:hover .arrowIcon {
+  color: white;
+}
+
+.actionSecondary:hover .arrowIcon {
+  color: white;
+}
+
+/* Features Section */
+.featuresSection {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .sectionTitle {
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
-    color: #120161;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
 }
 
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin: 0;
+}
 
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
 
-    .btn{
-              margin-right: 20px; /* Adiciona 20px de espaço à direita */
+.featureCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-    }
+.featureCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.featureContent {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.featureContent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+.featureLink {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  padding: 0.875rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.featureLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .featuresGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .quickActions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 1.5rem 1rem 3rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .welcomeContainer {
+    padding: 2rem;
+  }
+  
+  .userGreeting {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomeContainer {
+    padding: 1.5rem;
+  }
+  
+  .featureCard {
+    padding: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+  
+  .actionPrimary, .actionSecondary {
+    padding: 1.25rem;
+  }
+  
+  .actionIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}

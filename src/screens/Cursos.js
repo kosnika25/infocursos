@@ -13,7 +13,7 @@ function Cursos() {
                 {/* Curso 1 */}
                 <div className={styles.courseCard}>
                     <div className={styles.courseImage}>
-                        <img src="/Engenharia de Software.jpg" alt="Engenharia de Software" />
+<img src={`${process.env.PUBLIC_URL}/Engenharia_de_Software.jpg`} alt="TI" />
                     </div>
                     <div className={styles.courseContent}>
                         <h3 className={styles.courseTitle}>Engenharia de Software</h3>
@@ -28,7 +28,7 @@ function Cursos() {
                 {/* Curso 2 */}
                 <div className={styles.courseCard}>
                     <div className={styles.courseImage}>
-                        <img src="/Gestão de TI.webp" alt="Gestão de TI" />
+<img src={`${process.env.PUBLIC_URL}/Gestão_de_TI.webp`} alt="TI" />
                     </div>
                     <div className={styles.courseContent}>
                         <h3 className={styles.courseTitle}>Gestão de TI</h3>
@@ -43,7 +43,7 @@ function Cursos() {
                 {/* Curso 3 */}
                 <div className={styles.courseCard}>
                     <div className={styles.courseImage}>
-                        <img src="/Sistemas para Internet.jpg" alt="Sistemas para Internet" />
+<img src={`${process.env.PUBLIC_URL}/Sistemas_para_Internet.jpg`} alt="TI" />
                     </div>
                     <div className={styles.courseContent}>
                         <h3 className={styles.courseTitle}>Sistemas para Internet</h3>
@@ -58,7 +58,7 @@ function Cursos() {
                 {/* Curso 4 */}
                 <div className={styles.courseCard}>
                     <div className={styles.courseImage}>
-                        <img src="/ti.jpeg" alt="TI" />
+<img src={`${process.env.PUBLIC_URL}/ti.jpeg`} alt="TI" />
                     </div>
                     <div className={styles.courseContent}>
                         <h3 className={styles.courseTitle}>TI</h3>
