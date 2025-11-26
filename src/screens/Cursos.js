@@ -56,7 +56,6 @@ function Cursos() {
           </div>
         </div>
 
-<<<<<<< HEAD
             <div className={styles.coursesGrid}>
                 {/* Curso 1 */}
                 <div className={styles.courseCard}>
